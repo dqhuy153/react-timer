@@ -1,0 +1,22 @@
+.container {
+  padding: 0.8rem 2rem;
+  min-width: 5rem;
+  border: none;
+  color: var(--color);
+  border-radius: 15px;
+  background: var(--bg-color);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    background: var(--hover-bg-color);
+    color: var(--hover-color);
+    font-weight: bold;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}

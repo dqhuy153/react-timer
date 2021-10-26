@@ -1,0 +1,38 @@
+import React from 'react';
+import { BsPauseFill, BsPlayFill, BsStopFill } from 'react-icons/bs';
+
+import { millisecondsToHuman } from '../../utils/TimerUtils';
+import Button from '../Button';
+
+const Timer = ({
+  title,
+  project,
+  timer,
+  isRunning,
+  onEdit,
+  onRemove,
+  onTimerClick,
+}) => {
+  const buttonLabel = isRunning ? (
+    <BsPauseFill size={18} />
+  ) : (
+    <BsPlayFill size={18} />
+  );
+
+  return (
+    <div>
+      <p>{title}</p>
+      <p>{project}</p>
+      <p>{millisecondsToHuman(timer)}</p>
+
+      <div>
+        <Button onClick={onEdit}>Edit</Button>
+        <Button onClick={onRemove}>Remove</Button>
+      </div>
+
+      <Button onClick={onTimerClick}>{buttonLabel}</Button>
+    </div>
+  );
+};
+
+export default Timer;

@@ -1,0 +1,22 @@
+.container {
+  .input_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    label {
+      font-size: 1.1rem;
+      width: 5rem;
+      display: block;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      border: 1px solid #eee;
+      outline: none;
+    }
+  }
+}

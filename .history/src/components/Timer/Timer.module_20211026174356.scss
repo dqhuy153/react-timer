@@ -1,0 +1,31 @@
+.container {
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .timer {
+    font-size: 2rem;
+  }
+
+  .btn_container {
+    display: flex;
+
+    .btn {
+      margin: 0 0.3rem;
+      min-width: 7rem;
+    }
+  }
+
+  .timer_btn {
+    width: 96%;
+    margin: 1rem auto;
+  }
+}

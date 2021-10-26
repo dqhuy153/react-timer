@@ -1,0 +1,19 @@
+.container {
+  padding: 0.8rem 2rem;
+  min-width: 5rem;
+  background: rgb(34, 55, 95);
+  border: none;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    transition: all 10s linear;
+  }
+}
