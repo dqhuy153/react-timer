@@ -10,9 +10,13 @@ const EditableTimerForm = ({
   project,
   timer,
   isRunning,
+  type,
+  alarm,
   onUpdate,
   onRemove,
   onTimerClick,
+  onAlarmClick,
+  onTypeClick,
 }) => {
   const [isEdit, setIsEdit] = useState(false);
 
@@ -34,7 +38,9 @@ const EditableTimerForm = ({
       id={id}
       title={title}
       project={project}
-      timer={timer}
+      time={timer}
+      type={type}
+      alarm={alarm}
       onCancel={handleCloseEdit}
       onUpdate={handleUpdate}
     />
@@ -45,9 +51,13 @@ const EditableTimerForm = ({
       project={project}
       timer={timer}
       isRunning={isRunning}
+      type={type}
+      alarm={alarm}
       onEdit={handleOpenEdit}
       onRemove={() => onRemove(id)}
       onTimerClick={() => onTimerClick(id)}
+      onTypeClick={() => onTypeClick(id)}
+      onAlarmClick={() => onAlarmClick(id)}
     />
   );
 

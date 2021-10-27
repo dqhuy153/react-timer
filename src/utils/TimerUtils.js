@@ -11,7 +11,15 @@ export const millisecondsToHuman = (ms) => {
     pad(seconds.toString(), 2),
   ].join(':');
 
-  return humanized;
+  return { seconds, minutes, hours, humanized };
+};
+
+export const humanizedTimeToMilliseconds = (hours, minutes, seconds) => {
+  if (minutes < 0 || minutes > 60 || seconds < 0 || seconds > 60) {
+    throw new Error('Invalid time!');
+  }
+
+  return hours * 60 * 60 * 1000 + minutes * 60 * 1000 + seconds * 1000;
 };
 
 const pad = (numberString, size) => {
@@ -24,10 +32,12 @@ const pad = (numberString, size) => {
 
 export const newTimer = (attrs = {}) => {
   const timer = {
+    id: uuidv4(),
     title: attrs.title || 'Timer',
     project: attrs.project || 'Project',
-    id: uuidv4(),
-    time: 0,
+    type: attrs.type || 'up',
+    alarm: attrs.alarm || false,
+    time: attrs.time || 0,
     isRunning: false,
   };
 
