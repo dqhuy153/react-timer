@@ -125,7 +125,7 @@ function App() {
             (timer.isRunning && timer.time && timer.type === 'down') ||
             timer.type === 'up';
 
-          if (!isKeepRunning) {
+          if (!isKeepRunning && timer.alarm) {
             alarmRef.current.play();
           }
 

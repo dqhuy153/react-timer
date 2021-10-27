@@ -137,8 +137,8 @@ const TimerForm = ({
         <input
           type="checkbox"
           id="alarm"
-          value={inputAlarm}
-          onChange={(e) => setInputAlarm(e.target.value)}
+          checked={inputAlarm}
+          onChange={(e) => setInputAlarm(e.target.checked)}
         />
       </div>
 

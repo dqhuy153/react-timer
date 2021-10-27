@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../Button';
 import TimerForm from '../TimerForm';
+import { BiPlus } from 'react-icons/bi';
 
 import styles from './ToggleableTimerForm.module.scss';
 
@@ -23,7 +24,10 @@ const ToggleableTimerForm = ({ onUpdate, ...props }) => {
   const content = isOpen ? (
     <TimerForm onCancel={handleCloseForm} onUpdate={handleUpdate} />
   ) : (
-    <Button onClick={handleOpenForm}>+</Button>
+    <Button onClick={handleOpenForm} className={styles.new_btn}>
+      <BiPlus size={20} />
+      <span>New timer</span>
+    </Button>
   );
 
   return <div className={styles.container}>{content}</div>;
